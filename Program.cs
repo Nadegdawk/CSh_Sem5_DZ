@@ -10,7 +10,7 @@ void Main()
 		{
 			case "Task34": Task34(); break;
 			case "Task36": Task36(); break;
-            case "Task38": Task38(); break;
+			case "Task38": Task38(); break;
 			case "exit": isWorking = false; break;
 		}
 		Console.WriteLine();
@@ -23,12 +23,12 @@ void Task34()
 // [345, 897, 568, 234] -> 2
 {
 	Console.WriteLine("The quantity of even numbers in the array");
-    int length = ReadInt("lenght array");
-    int[] array = GetRandomArray(length, 100, 1000);
-    PrintArray(array);
-    int a = QuantityEvenNumberArray(array);
-    System.Console.WriteLine($"Even numbers: {a}");
-    }
+	int length = ReadInt("lenght array");
+	int[] array = GetRandomArray(length, 100, 1000);
+	PrintArray(array);
+	int a = QuantityEvenNumberArray(array);
+	System.Console.WriteLine($"Even numbers: {a}");
+}
 
 void Task36()
 // Задача 36:Задайте одномерный массив, заполненный случайными числами. 
@@ -51,13 +51,13 @@ void Task38()
 // и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 {
-    Console.WriteLine("The difference between the maximum and minimum elements");
-    int length = ReadInt("lenght array");
-    int xMin = ReadInt("Minimum");
-    int xMax = ReadInt("Maximum");
+	Console.WriteLine("The difference between the maximum and minimum elements");
+	int length = ReadInt("lenght array");
+	int xMin = ReadInt("Minimum");
+	int xMax = ReadInt("Maximum");
 	int[] array = GetRandomArray (length, xMin, xMax-1);
 	double[] arrayD = GetRandomArrayDouble (array);
-    PrintArrayDouble(arrayD);
+	PrintArrayDouble(arrayD);
 	System.Console.WriteLine("");
 	System.Console.WriteLine($"Max: {MaxArray(arrayD)}    Min: {MinArray(arrayD)}");
 	double d = MaxArray(arrayD) - MinArray(arrayD);
@@ -101,7 +101,7 @@ bool IsEven(int number)         //четность числа
 	return number % 2 == 0; // == - сравнение (результаты сравнения: true, false)
 }
 
-void PrintArray(int[] array)
+void PrintArray(int[] array)		//печать массива
 {
 	for (int i = 0; i < array.Length; i++)
 	{
@@ -109,7 +109,7 @@ void PrintArray(int[] array)
 	}
 }
 
-int SumOddElements (int[] array)
+int SumOddElements (int[] array)   //сумма нечетных элементов
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
@@ -133,7 +133,7 @@ double[] GetRandomArrayDouble (int[] array)    //создание рандомн
 	return arrayD;
 }
 
-void PrintArrayDouble (double[] array)
+void PrintArrayDouble (double[] array)		//печать вещ. массива
 {
 	for (int i = 0; i < array.Length; i++)
 	{
@@ -141,7 +141,7 @@ void PrintArrayDouble (double[] array)
 	}
 }
 
-double MinArray (double[] array)
+double MinArray (double[] array)		//поиск минимального элемента в вещ. массиве
 {
 	double minArray = array[0];
 	for (int i = 1; i < array.Length; i++)
@@ -151,7 +151,7 @@ double MinArray (double[] array)
 	return minArray;
 }
 
-double MaxArray (double[] array)
+double MaxArray (double[] array)		//поиск максимального элемента в вещ. массиве
 {
 	double maxArray = array[0];
 	for (int i = 1; i < array.Length; i++)
